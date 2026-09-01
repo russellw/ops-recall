@@ -1,0 +1,376 @@
+{
+  "channel": {
+    "id": "C02OPSWAR",
+    "name": "ops-war-room"
+  },
+  "users": [
+    {
+      "id": "U01PRIYA",
+      "name": "priya"
+    },
+    {
+      "id": "U02DAN",
+      "name": "dan"
+    },
+    {
+      "id": "U03MARCO",
+      "name": "marco"
+    },
+    {
+      "id": "U04SASHA",
+      "name": "sasha"
+    },
+    {
+      "id": "U05LENA",
+      "name": "lena"
+    },
+    {
+      "id": "U06TOMAS",
+      "name": "tomas"
+    },
+    {
+      "id": "U07RHEA",
+      "name": "rhea"
+    },
+    {
+      "id": "U08NADIA",
+      "name": "nadia"
+    }
+  ],
+  "messages": [
+    {
+      "type": "message",
+      "user": "U05LENA",
+      "text": "settlement batch is deadlocking against the refund worker on orders. deadlock detected ~40/min on orders_db",
+      "ts": "1678238400.000300",
+      "thread_ts": "1678238400.000300",
+      "reply_count": 2
+    },
+    {
+      "type": "message",
+      "user": "U05LENA",
+      "text": "classic lock ordering problem, both touch the same order rows in opposite order",
+      "ts": "1678238800.000300",
+      "thread_ts": "1678238400.000300"
+    },
+    {
+      "type": "message",
+      "user": "U05LENA",
+      "text": "paused the refund worker, deadlocks stopped immediately. will fix both to sort by order_id. INC-1103",
+      "ts": "1678239000.000300",
+      "thread_ts": "1678238400.000300"
+    },
+    {
+      "type": "message",
+      "user": "U04SASHA",
+      "text": "checkout p99 is 2.4s and we're seeing UnknownHostException to the payment gateway",
+      "ts": "1706872320.000100",
+      "thread_ts": "1706872320.000100",
+      "reply_count": 2
+    },
+    {
+      "type": "message",
+      "user": "U04SASHA",
+      "text": "CoreDNS NXDOMAIN rate is 3x baseline. new namespace shipped with ndots:5",
+      "ts": "1706872720.000100",
+      "thread_ts": "1706872320.000100"
+    },
+    {
+      "type": "message",
+      "user": "U04SASHA",
+      "text": "ndots:1 + trailing dots on external hostnames, QPS back to normal. INC-1620",
+      "ts": "1706873820.000100",
+      "thread_ts": "1706872320.000100"
+    },
+    {
+      "type": "message",
+      "user": "U02DAN",
+      "text": "every TLS handshake at the edge is failing. HTTP 526 from the CDN, cert expired at midnight",
+      "ts": "1724976180.000100",
+      "thread_ts": "1724976180.000100",
+      "reply_count": 2
+    },
+    {
+      "type": "message",
+      "user": "U02DAN",
+      "text": "cert-manager has been failing DNS-01 for 26 days. route53 IAM policy change removed its write permission",
+      "ts": "1724976480.000100",
+      "thread_ts": "1724976180.000100"
+    },
+    {
+      "type": "message",
+      "user": "U02DAN",
+      "text": "permission restored, forced renewal, valid cert serving. INC-1770",
+      "ts": "1724978580.000100",
+      "thread_ts": "1724976180.000100"
+    },
+    {
+      "type": "message",
+      "user": "U03MARCO",
+      "text": "paged for checkout 503s. ERR_5012, HikariPool-1 exhausted, same shape as the pool incidents we keep having",
+      "ts": "1731552060.000200",
+      "thread_ts": "1731552060.000200",
+      "reply_count": 5
+    },
+    {
+      "type": "message",
+      "user": "U03MARCO",
+      "text": "flyway-2024.11.14.01 is still running. it does CREATE INDEX idx_orders_status without CONCURRENTLY",
+      "ts": "1731552180.000200",
+      "thread_ts": "1731552060.000200"
+    },
+    {
+      "type": "message",
+      "user": "U04SASHA",
+      "text": "on 1.2B rows that will hold an exclusive lock for a long time",
+      "ts": "1731552260.000200",
+      "thread_ts": "1731552060.000200"
+    },
+    {
+      "type": "message",
+      "user": "U03MARCO",
+      "text": "cancelled the migration backend, pg_cancel_backend(31904). locks released",
+      "ts": "1731552960.000200",
+      "thread_ts": "1731552060.000200"
+    },
+    {
+      "type": "message",
+      "user": "U03MARCO",
+      "text": "pool recovered, checkout back to baseline. rebuilding the index CONCURRENTLY now",
+      "ts": "1731553260.000200",
+      "thread_ts": "1731552060.000200"
+    },
+    {
+      "type": "message",
+      "user": "U04SASHA",
+      "text": "paused the nightly migration runner until we add a CI check for this. INC-1842 closed",
+      "ts": "1731556060.000200",
+      "thread_ts": "1731552060.000200"
+    },
+    {
+      "type": "message",
+      "user": "U07RHEA",
+      "text": "orders-consumer group is stuck rebalancing, CommitFailedException in the logs, lag rising",
+      "ts": "1745253840.000100",
+      "thread_ts": "1745253840.000100",
+      "reply_count": 3
+    },
+    {
+      "type": "message",
+      "user": "U07RHEA",
+      "text": "enrichment-api p99 went from 40ms to 4s. batches are taking longer than max.poll.interval.ms so the coordinator kicks us",
+      "ts": "1745254040.000100",
+      "thread_ts": "1745253840.000100"
+    },
+    {
+      "type": "message",
+      "user": "U07RHEA",
+      "text": "dropping max.poll.records 500 -> 50 to get polls back inside the interval",
+      "ts": "1745254340.000100",
+      "thread_ts": "1745253840.000100"
+    },
+    {
+      "type": "message",
+      "user": "U06TOMAS",
+      "text": "group is Stable again, lag draining. INC-1955",
+      "ts": "1745254740.000100",
+      "thread_ts": "1745253840.000100"
+    },
+    {
+      "type": "message",
+      "user": "U08NADIA",
+      "text": "search-svc is in CrashLoopBackOff, OOMKilled every ~11 min, exit 137",
+      "ts": "1752931800.000100",
+      "thread_ts": "1752931800.000100",
+      "reply_count": 2
+    },
+    {
+      "type": "message",
+      "user": "U08NADIA",
+      "text": "heap dump shows the query cache holding 4M entries. this morning's deploy swapped Caffeine for a plain HashMap",
+      "ts": "1752932400.000100",
+      "thread_ts": "1752931800.000100"
+    },
+    {
+      "type": "message",
+      "user": "U08NADIA",
+      "text": "rolling back. restarts stopped. INC-2010",
+      "ts": "1752932700.000100",
+      "thread_ts": "1752931800.000100"
+    },
+    {
+      "type": "message",
+      "user": "U06TOMAS",
+      "text": "orders-consumer lag climbing since 09:05, already 400k and rising",
+      "ts": "1765443900.000100",
+      "thread_ts": "1765443900.000100",
+      "reply_count": 4
+    },
+    {
+      "type": "message",
+      "user": "U06TOMAS",
+      "text": "lag is entirely on partition 7. the other 23 are flat. this is skew not a consumer problem",
+      "ts": "1765444200.000100",
+      "thread_ts": "1765443900.000100"
+    },
+    {
+      "type": "message",
+      "user": "U07RHEA",
+      "text": "producer deploy this morning changed the partition key to merchant_id",
+      "ts": "1765444500.000100",
+      "thread_ts": "1765443900.000100"
+    },
+    {
+      "type": "message",
+      "user": "U06TOMAS",
+      "text": "scaling consumers won't help, one partition = one consumer. reverting the key",
+      "ts": "1765444600.000100",
+      "thread_ts": "1765443900.000100"
+    },
+    {
+      "type": "message",
+      "user": "U07RHEA",
+      "text": "backfill consumer pinned to partition 7 to drain the backlog. INC-2088",
+      "ts": "1765446900.000100",
+      "thread_ts": "1765443900.000100"
+    },
+    {
+      "type": "message",
+      "user": "U01PRIYA",
+      "text": "orders_db is refusing writes, no space left on device on /var/lib/postgresql. db-prod-03",
+      "ts": "1773550500.000100",
+      "thread_ts": "1773550500.000100",
+      "reply_count": 2
+    },
+    {
+      "type": "message",
+      "user": "U01PRIYA",
+      "text": "pg_replication_slots shows replica_2 inactive holding 61GB of WAL. that replica was decommissioned on tuesday",
+      "ts": "1773550800.000100",
+      "thread_ts": "1773550500.000100"
+    },
+    {
+      "type": "message",
+      "user": "U01PRIYA",
+      "text": "dropped the slot, 61GB freed in two minutes, writes are back. INC-2150",
+      "ts": "1773551100.000100",
+      "thread_ts": "1773550500.000100"
+    },
+    {
+      "type": "message",
+      "user": "U08NADIA",
+      "text": "search-svc canary looks healthy, heap flat at 61%",
+      "ts": "1774000000.000000"
+    },
+    {
+      "type": "message",
+      "user": "U06TOMAS",
+      "text": "reminder: the staging refresh runs tonight, expect orders-db staging to be read-only for an hour",
+      "ts": "1780500000.000000"
+    },
+    {
+      "type": "message",
+      "user": "U05LENA",
+      "text": "does anyone know why the grafana orders dashboard lost its p99 panel",
+      "ts": "1780600000.000000"
+    },
+    {
+      "type": "message",
+      "user": "U01PRIYA",
+      "text": "checkout is throwing 503s, HikariPool-1 timeouts everywhere. ERR_5012 all over the checkout-api logs",
+      "ts": "1780755120.000100",
+      "thread_ts": "1780755120.000100",
+      "reply_count": 8
+    },
+    {
+      "type": "message",
+      "user": "U02DAN",
+      "text": "pool is pinned 50/50 on all pods, 137 pending. nothing deployed today so it's not us",
+      "ts": "1780755215.000100",
+      "thread_ts": "1780755120.000100"
+    },
+    {
+      "type": "message",
+      "user": "U01PRIYA",
+      "text": "pg_stat_activity on db-prod-03 shows 41 sessions in Lock wait. one backend at the top: pid 48211 `VACUUM FULL orders`",
+      "ts": "1780755360.000100",
+      "thread_ts": "1780755120.000100"
+    },
+    {
+      "type": "message",
+      "user": "U02DAN",
+      "text": "who ran a VACUUM FULL on a monday afternoon",
+      "ts": "1780755420.000100",
+      "thread_ts": "1780755120.000100"
+    },
+    {
+      "type": "message",
+      "user": "U01PRIYA",
+      "text": "capacity ticket OPS-4411 asked to reclaim space. it was me, I did not realize VACUUM FULL takes ACCESS EXCLUSIVE",
+      "ts": "1780755460.000100",
+      "thread_ts": "1780755120.000100"
+    },
+    {
+      "type": "message",
+      "user": "U01PRIYA",
+      "text": "terminating it: SELECT pg_terminate_backend(48211)",
+      "ts": "1780756440.000100",
+      "thread_ts": "1780755120.000100"
+    },
+    {
+      "type": "message",
+      "user": "U02DAN",
+      "text": "pool draining, 6/50 active now. 5xx rate falling off a cliff",
+      "ts": "1780756500.000100",
+      "thread_ts": "1780755120.000100"
+    },
+    {
+      "type": "message",
+      "user": "U02DAN",
+      "text": "bumped the pool ceiling to 80 to soak up the retry surge, will revert once traffic settles",
+      "ts": "1780756620.000100",
+      "thread_ts": "1780755120.000100"
+    },
+    {
+      "type": "message",
+      "user": "U01PRIYA",
+      "text": "INC-2197 resolved. reclaim will be redone as VACUUM (ANALYZE) + pg_repack in the sunday window",
+      "ts": "1780760120.000100",
+      "thread_ts": "1780755120.000100"
+    },
+    {
+      "type": "message",
+      "user": "U04SASHA",
+      "text": "merged the CI check that rejects CREATE INDEX without CONCURRENTLY on big tables",
+      "ts": "1781000000.000000"
+    },
+    {
+      "type": "message",
+      "user": "U02DAN",
+      "text": "processor-api is 429ing us on 60% of calls, ERR_7702. payments error rate 22%",
+      "ts": "1785176520.000100",
+      "thread_ts": "1785176520.000100",
+      "reply_count": 2
+    },
+    {
+      "type": "message",
+      "user": "U02DAN",
+      "text": "our outbound rate is 3.4x baseline with a 15s sawtooth. that's our own retries, not their capacity",
+      "ts": "1785176820.000100",
+      "thread_ts": "1785176520.000100"
+    },
+    {
+      "type": "message",
+      "user": "U02DAN",
+      "text": "cut the retry budget 5 -> 1 by flag, outbound rate is back under the limit and 429s stopped. INC-2205",
+      "ts": "1785177120.000100",
+      "thread_ts": "1785176520.000100"
+    },
+    {
+      "type": "message",
+      "user": "U07RHEA",
+      "text": "kafka broker upgrade window moved to next thursday",
+      "ts": "1785300000.000000"
+    }
+  ]
+}

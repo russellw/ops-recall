@@ -1,0 +1,911 @@
+{
+  "incidents": [
+    {
+      "id": "PXK7N2QW",
+      "incident_number": 2197,
+      "title": "checkout-api 5xx ratio > 25% (ERR_5012 connection timeout)",
+      "status": "resolved",
+      "urgency": "high",
+      "created_at": "2026-06-02T14:12:00Z",
+      "resolved_at": "2026-06-02T15:38:00Z",
+      "incident_key": "INC-2197",
+      "service": {
+        "id": "SCHEC",
+        "summary": "checkout-api"
+      },
+      "html_url": "https://example.pagerduty.com/incidents/PXK7N2QW",
+      "body": {
+        "type": "incident_body",
+        "details": {
+          "alertname": "HighErrorRatio",
+          "service": "checkout-api",
+          "error_code": "ERR_5012",
+          "host": "db-prod-03",
+          "description": "HikariPool-1 - Connection is not available, request timed out after 30000ms",
+          "runbook": "https://wiki.internal/db-runbook#connection-pool-exhausted"
+        }
+      },
+      "log_entries": [
+        {
+          "id": "PXK7N2QW-L0",
+          "type": "trigger_log_entry",
+          "created_at": "2026-06-02T14:12:00Z",
+          "summary": "Triggered through the Datadog integration: checkout-api 5xx ratio > 25% (ERR_5012 connection timeout)",
+          "channel": {
+            "type": "alert",
+            "details": {
+              "alertname": "HighErrorRatio",
+              "service": "checkout-api",
+              "error_code": "ERR_5012",
+              "host": "db-prod-03",
+              "description": "HikariPool-1 - Connection is not available, request timed out after 30000ms",
+              "runbook": "https://wiki.internal/db-runbook#connection-pool-exhausted"
+            }
+          }
+        },
+        {
+          "id": "PXK7N2QW-L1",
+          "type": "assign_log_entry",
+          "created_at": "2026-06-02T14:12:05Z",
+          "summary": "Assigned to Priya Raman via escalation policy 'Core Platform'",
+          "agent": {
+            "summary": "Escalation Policy"
+          }
+        },
+        {
+          "id": "PXK7N2QW-L2",
+          "type": "acknowledge_log_entry",
+          "created_at": "2026-06-02T14:15:00Z",
+          "summary": "Acknowledged by Priya Raman",
+          "agent": {
+            "summary": "Priya Raman"
+          }
+        },
+        {
+          "id": "PXK7N2QW-N0",
+          "type": "annotate_log_entry",
+          "created_at": "2026-06-02T14:25:00Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Priya Raman"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "blocking backend 48211 running VACUUM FULL orders"
+          }
+        },
+        {
+          "id": "PXK7N2QW-N1",
+          "type": "annotate_log_entry",
+          "created_at": "2026-06-02T14:35:00Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Priya Raman"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "terminated blocker, pool recovered"
+          }
+        },
+        {
+          "id": "PXK7N2QW-LR",
+          "type": "resolve_log_entry",
+          "created_at": "2026-06-02T15:38:00Z",
+          "summary": "Resolved by Priya Raman",
+          "agent": {
+            "summary": "Priya Raman"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PA91MZ3E",
+      "incident_number": 1842,
+      "title": "checkout-api 5xx ratio > 25% (ERR_5012 connection timeout)",
+      "status": "resolved",
+      "urgency": "high",
+      "created_at": "2024-11-14T02:41:00Z",
+      "resolved_at": "2024-11-14T03:52:00Z",
+      "incident_key": "INC-1842",
+      "service": {
+        "id": "SCHEC",
+        "summary": "checkout-api"
+      },
+      "html_url": "https://example.pagerduty.com/incidents/PA91MZ3E",
+      "body": {
+        "type": "incident_body",
+        "details": {
+          "alertname": "HighErrorRatio",
+          "service": "checkout-api",
+          "error_code": "ERR_5012",
+          "host": "db-prod-03",
+          "description": "HikariPool-1 - Connection is not available, request timed out after 30000ms"
+        }
+      },
+      "log_entries": [
+        {
+          "id": "PA91MZ3E-L0",
+          "type": "trigger_log_entry",
+          "created_at": "2024-11-14T02:41:00Z",
+          "summary": "Triggered through the Datadog integration: checkout-api 5xx ratio > 25% (ERR_5012 connection timeout)",
+          "channel": {
+            "type": "alert",
+            "details": {
+              "alertname": "HighErrorRatio",
+              "service": "checkout-api",
+              "error_code": "ERR_5012",
+              "host": "db-prod-03",
+              "description": "HikariPool-1 - Connection is not available, request timed out after 30000ms"
+            }
+          }
+        },
+        {
+          "id": "PA91MZ3E-L1",
+          "type": "assign_log_entry",
+          "created_at": "2024-11-14T02:41:05Z",
+          "summary": "Assigned to Marco Vidal via escalation policy 'Core Platform'",
+          "agent": {
+            "summary": "Escalation Policy"
+          }
+        },
+        {
+          "id": "PA91MZ3E-L2",
+          "type": "acknowledge_log_entry",
+          "created_at": "2024-11-14T02:45:00Z",
+          "summary": "Acknowledged by Marco Vidal",
+          "agent": {
+            "summary": "Marco Vidal"
+          }
+        },
+        {
+          "id": "PA91MZ3E-N0",
+          "type": "annotate_log_entry",
+          "created_at": "2024-11-14T02:55:00Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Marco Vidal"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "flyway migration holding ACCESS EXCLUSIVE on orders"
+          }
+        },
+        {
+          "id": "PA91MZ3E-N1",
+          "type": "annotate_log_entry",
+          "created_at": "2024-11-14T03:05:00Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Marco Vidal"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "cancelled migration backend 31904"
+          }
+        },
+        {
+          "id": "PA91MZ3E-LR",
+          "type": "resolve_log_entry",
+          "created_at": "2024-11-14T03:52:00Z",
+          "summary": "Resolved by Marco Vidal",
+          "agent": {
+            "summary": "Marco Vidal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PB40QL7T",
+      "incident_number": 1103,
+      "title": "orders_db deadlock rate > 10/min",
+      "status": "resolved",
+      "urgency": "low",
+      "created_at": "2023-03-08T01:20:00Z",
+      "resolved_at": "2023-03-08T02:10:00Z",
+      "incident_key": "INC-1103",
+      "service": {
+        "id": "SORDE",
+        "summary": "orders-db"
+      },
+      "html_url": "https://example.pagerduty.com/incidents/PB40QL7T",
+      "body": {
+        "type": "incident_body",
+        "details": {
+          "alertname": "DeadlockRate",
+          "database": "orders_db",
+          "host": "db-prod-01",
+          "description": "deadlock detected between settlement-batch and refund-worker"
+        }
+      },
+      "log_entries": [
+        {
+          "id": "PB40QL7T-L0",
+          "type": "trigger_log_entry",
+          "created_at": "2023-03-08T01:20:00Z",
+          "summary": "Triggered through the Datadog integration: orders_db deadlock rate > 10/min",
+          "channel": {
+            "type": "alert",
+            "details": {
+              "alertname": "DeadlockRate",
+              "database": "orders_db",
+              "host": "db-prod-01",
+              "description": "deadlock detected between settlement-batch and refund-worker"
+            }
+          }
+        },
+        {
+          "id": "PB40QL7T-L1",
+          "type": "assign_log_entry",
+          "created_at": "2023-03-08T01:20:05Z",
+          "summary": "Assigned to Lena Fischer via escalation policy 'Core Platform'",
+          "agent": {
+            "summary": "Escalation Policy"
+          }
+        },
+        {
+          "id": "PB40QL7T-L2",
+          "type": "acknowledge_log_entry",
+          "created_at": "2023-03-08T01:27:00Z",
+          "summary": "Acknowledged by Lena Fischer",
+          "agent": {
+            "summary": "Lena Fischer"
+          }
+        },
+        {
+          "id": "PB40QL7T-N0",
+          "type": "annotate_log_entry",
+          "created_at": "2023-03-08T01:37:00Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Lena Fischer"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "paused refund worker"
+          }
+        },
+        {
+          "id": "PB40QL7T-LR",
+          "type": "resolve_log_entry",
+          "created_at": "2023-03-08T02:10:00Z",
+          "summary": "Resolved by Lena Fischer",
+          "agent": {
+            "summary": "Lena Fischer"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PC77RT2M",
+      "incident_number": 2088,
+      "title": "orders-consumer group lag > 100000",
+      "status": "resolved",
+      "urgency": "low",
+      "created_at": "2025-12-11T09:05:00Z",
+      "resolved_at": "2025-12-11T11:20:00Z",
+      "incident_key": "INC-2088",
+      "service": {
+        "id": "SKAFK",
+        "summary": "kafka"
+      },
+      "html_url": "https://example.pagerduty.com/incidents/PC77RT2M",
+      "body": {
+        "type": "incident_body",
+        "details": {
+          "alertname": "ConsumerLag",
+          "group": "orders-consumer",
+          "topic": "orders-events",
+          "partition": "7",
+          "description": "lag concentrated on a single partition"
+        }
+      },
+      "log_entries": [
+        {
+          "id": "PC77RT2M-L0",
+          "type": "trigger_log_entry",
+          "created_at": "2025-12-11T09:05:00Z",
+          "summary": "Triggered through the Datadog integration: orders-consumer group lag > 100000",
+          "channel": {
+            "type": "alert",
+            "details": {
+              "alertname": "ConsumerLag",
+              "group": "orders-consumer",
+              "topic": "orders-events",
+              "partition": "7",
+              "description": "lag concentrated on a single partition"
+            }
+          }
+        },
+        {
+          "id": "PC77RT2M-L1",
+          "type": "assign_log_entry",
+          "created_at": "2025-12-11T09:05:05Z",
+          "summary": "Assigned to Tomas Neel via escalation policy 'Core Platform'",
+          "agent": {
+            "summary": "Escalation Policy"
+          }
+        },
+        {
+          "id": "PC77RT2M-L2",
+          "type": "acknowledge_log_entry",
+          "created_at": "2025-12-11T09:10:00Z",
+          "summary": "Acknowledged by Tomas Neel",
+          "agent": {
+            "summary": "Tomas Neel"
+          }
+        },
+        {
+          "id": "PC77RT2M-N0",
+          "type": "annotate_log_entry",
+          "created_at": "2025-12-11T09:20:00Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Tomas Neel"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "partition key change caused skew"
+          }
+        },
+        {
+          "id": "PC77RT2M-N1",
+          "type": "annotate_log_entry",
+          "created_at": "2025-12-11T09:30:00Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Tomas Neel"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "reverted key to order_id"
+          }
+        },
+        {
+          "id": "PC77RT2M-LR",
+          "type": "resolve_log_entry",
+          "created_at": "2025-12-11T11:20:00Z",
+          "summary": "Resolved by Tomas Neel",
+          "agent": {
+            "summary": "Tomas Neel"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PD18XX9K",
+      "incident_number": 1955,
+      "title": "orders-consumer group rebalancing repeatedly",
+      "status": "resolved",
+      "urgency": "low",
+      "created_at": "2025-04-21T16:44:00Z",
+      "resolved_at": "2025-04-21T18:02:00Z",
+      "incident_key": "INC-1955",
+      "service": {
+        "id": "SKAFK",
+        "summary": "kafka"
+      },
+      "html_url": "https://example.pagerduty.com/incidents/PD18XX9K",
+      "body": {
+        "type": "incident_body",
+        "details": {
+          "alertname": "ConsumerGroupUnstable",
+          "group": "orders-consumer",
+          "description": "CommitFailedException, group cycling PreparingRebalance"
+        }
+      },
+      "log_entries": [
+        {
+          "id": "PD18XX9K-L0",
+          "type": "trigger_log_entry",
+          "created_at": "2025-04-21T16:44:00Z",
+          "summary": "Triggered through the Datadog integration: orders-consumer group rebalancing repeatedly",
+          "channel": {
+            "type": "alert",
+            "details": {
+              "alertname": "ConsumerGroupUnstable",
+              "group": "orders-consumer",
+              "description": "CommitFailedException, group cycling PreparingRebalance"
+            }
+          }
+        },
+        {
+          "id": "PD18XX9K-L1",
+          "type": "assign_log_entry",
+          "created_at": "2025-04-21T16:44:05Z",
+          "summary": "Assigned to Rhea Kapoor via escalation policy 'Core Platform'",
+          "agent": {
+            "summary": "Escalation Policy"
+          }
+        },
+        {
+          "id": "PD18XX9K-L2",
+          "type": "acknowledge_log_entry",
+          "created_at": "2025-04-21T16:47:20Z",
+          "summary": "Acknowledged by Rhea Kapoor",
+          "agent": {
+            "summary": "Rhea Kapoor"
+          }
+        },
+        {
+          "id": "PD18XX9K-N0",
+          "type": "annotate_log_entry",
+          "created_at": "2025-04-21T16:57:20Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Rhea Kapoor"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "max.poll.records lowered to 50"
+          }
+        },
+        {
+          "id": "PD18XX9K-LR",
+          "type": "resolve_log_entry",
+          "created_at": "2025-04-21T18:02:00Z",
+          "summary": "Resolved by Rhea Kapoor",
+          "agent": {
+            "summary": "Rhea Kapoor"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PE55CC1A",
+      "incident_number": 1770,
+      "title": "TLS handshake failures at edge-gw (HTTP 526)",
+      "status": "resolved",
+      "urgency": "high",
+      "created_at": "2024-08-30T00:03:00Z",
+      "resolved_at": "2024-08-30T00:51:00Z",
+      "incident_key": "INC-1770",
+      "service": {
+        "id": "SEDGE",
+        "summary": "edge-gw"
+      },
+      "html_url": "https://example.pagerduty.com/incidents/PE55CC1A",
+      "body": {
+        "type": "incident_body",
+        "details": {
+          "alertname": "TLSHandshakeFailure",
+          "host": "edge-gw-2",
+          "http_status": "526",
+          "description": "NET::ERR_CERT_DATE_INVALID for api.example.com"
+        }
+      },
+      "log_entries": [
+        {
+          "id": "PE55CC1A-L0",
+          "type": "trigger_log_entry",
+          "created_at": "2024-08-30T00:03:00Z",
+          "summary": "Triggered through the Datadog integration: TLS handshake failures at edge-gw (HTTP 526)",
+          "channel": {
+            "type": "alert",
+            "details": {
+              "alertname": "TLSHandshakeFailure",
+              "host": "edge-gw-2",
+              "http_status": "526",
+              "description": "NET::ERR_CERT_DATE_INVALID for api.example.com"
+            }
+          }
+        },
+        {
+          "id": "PE55CC1A-L1",
+          "type": "assign_log_entry",
+          "created_at": "2024-08-30T00:03:05Z",
+          "summary": "Assigned to Dan Osei via escalation policy 'Core Platform'",
+          "agent": {
+            "summary": "Escalation Policy"
+          }
+        },
+        {
+          "id": "PE55CC1A-L2",
+          "type": "acknowledge_log_entry",
+          "created_at": "2024-08-30T00:05:00Z",
+          "summary": "Acknowledged by Dan Osei",
+          "agent": {
+            "summary": "Dan Osei"
+          }
+        },
+        {
+          "id": "PE55CC1A-N0",
+          "type": "annotate_log_entry",
+          "created_at": "2024-08-30T00:15:00Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Dan Osei"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "cert-manager DNS-01 failing 26 days"
+          }
+        },
+        {
+          "id": "PE55CC1A-N1",
+          "type": "annotate_log_entry",
+          "created_at": "2024-08-30T00:25:00Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Dan Osei"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "forced renewal"
+          }
+        },
+        {
+          "id": "PE55CC1A-LR",
+          "type": "resolve_log_entry",
+          "created_at": "2024-08-30T00:51:00Z",
+          "summary": "Resolved by Dan Osei",
+          "agent": {
+            "summary": "Dan Osei"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PF63HH8Q",
+      "incident_number": 2010,
+      "title": "search-svc pods restarting (OOMKilled)",
+      "status": "resolved",
+      "urgency": "low",
+      "created_at": "2025-07-19T13:30:00Z",
+      "resolved_at": "2025-07-19T15:05:00Z",
+      "incident_key": "INC-2010",
+      "service": {
+        "id": "SSEAR",
+        "summary": "search-svc"
+      },
+      "html_url": "https://example.pagerduty.com/incidents/PF63HH8Q",
+      "body": {
+        "type": "incident_body",
+        "details": {
+          "alertname": "PodCrashLooping",
+          "service": "search-svc",
+          "exit_code": "137",
+          "description": "OOMKilled, G1 Old Gen 95%"
+        }
+      },
+      "log_entries": [
+        {
+          "id": "PF63HH8Q-L0",
+          "type": "trigger_log_entry",
+          "created_at": "2025-07-19T13:30:00Z",
+          "summary": "Triggered through the Datadog integration: search-svc pods restarting (OOMKilled)",
+          "channel": {
+            "type": "alert",
+            "details": {
+              "alertname": "PodCrashLooping",
+              "service": "search-svc",
+              "exit_code": "137",
+              "description": "OOMKilled, G1 Old Gen 95%"
+            }
+          }
+        },
+        {
+          "id": "PF63HH8Q-L1",
+          "type": "assign_log_entry",
+          "created_at": "2025-07-19T13:30:05Z",
+          "summary": "Assigned to Nadia Brandt via escalation policy 'Core Platform'",
+          "agent": {
+            "summary": "Escalation Policy"
+          }
+        },
+        {
+          "id": "PF63HH8Q-L2",
+          "type": "acknowledge_log_entry",
+          "created_at": "2025-07-19T13:35:40Z",
+          "summary": "Acknowledged by Nadia Brandt",
+          "agent": {
+            "summary": "Nadia Brandt"
+          }
+        },
+        {
+          "id": "PF63HH8Q-N0",
+          "type": "annotate_log_entry",
+          "created_at": "2025-07-19T13:45:40Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Nadia Brandt"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "unbounded query cache"
+          }
+        },
+        {
+          "id": "PF63HH8Q-N1",
+          "type": "annotate_log_entry",
+          "created_at": "2025-07-19T13:55:40Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Nadia Brandt"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "rolled back"
+          }
+        },
+        {
+          "id": "PF63HH8Q-LR",
+          "type": "resolve_log_entry",
+          "created_at": "2025-07-19T15:05:00Z",
+          "summary": "Resolved by Nadia Brandt",
+          "agent": {
+            "summary": "Nadia Brandt"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PG22WW4D",
+      "incident_number": 1620,
+      "title": "checkout-api p99 latency > 2s with DNS resolution errors",
+      "status": "resolved",
+      "urgency": "low",
+      "created_at": "2024-02-02T11:12:00Z",
+      "resolved_at": "2024-02-02T12:40:00Z",
+      "incident_key": "INC-1620",
+      "service": {
+        "id": "SCHEC",
+        "summary": "checkout-api"
+      },
+      "html_url": "https://example.pagerduty.com/incidents/PG22WW4D",
+      "body": {
+        "type": "incident_body",
+        "details": {
+          "alertname": "HighLatency",
+          "service": "checkout-api",
+          "description": "UnknownHostException to payment gateway, CoreDNS NXDOMAIN 3x baseline"
+        }
+      },
+      "log_entries": [
+        {
+          "id": "PG22WW4D-L0",
+          "type": "trigger_log_entry",
+          "created_at": "2024-02-02T11:12:00Z",
+          "summary": "Triggered through the Datadog integration: checkout-api p99 latency > 2s with DNS resolution errors",
+          "channel": {
+            "type": "alert",
+            "details": {
+              "alertname": "HighLatency",
+              "service": "checkout-api",
+              "description": "UnknownHostException to payment gateway, CoreDNS NXDOMAIN 3x baseline"
+            }
+          }
+        },
+        {
+          "id": "PG22WW4D-L1",
+          "type": "assign_log_entry",
+          "created_at": "2024-02-02T11:12:05Z",
+          "summary": "Assigned to Sasha Lindqvist via escalation policy 'Core Platform'",
+          "agent": {
+            "summary": "Escalation Policy"
+          }
+        },
+        {
+          "id": "PG22WW4D-L2",
+          "type": "acknowledge_log_entry",
+          "created_at": "2024-02-02T11:16:20Z",
+          "summary": "Acknowledged by Sasha Lindqvist",
+          "agent": {
+            "summary": "Sasha Lindqvist"
+          }
+        },
+        {
+          "id": "PG22WW4D-N0",
+          "type": "annotate_log_entry",
+          "created_at": "2024-02-02T11:26:20Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Sasha Lindqvist"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "ndots:5 in new namespace"
+          }
+        },
+        {
+          "id": "PG22WW4D-LR",
+          "type": "resolve_log_entry",
+          "created_at": "2024-02-02T12:40:00Z",
+          "summary": "Resolved by Sasha Lindqvist",
+          "agent": {
+            "summary": "Sasha Lindqvist"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PH09KK5N",
+      "incident_number": 2150,
+      "title": "orders_db write failures: no space left on device",
+      "status": "resolved",
+      "urgency": "high",
+      "created_at": "2026-03-15T04:55:00Z",
+      "resolved_at": "2026-03-15T06:10:00Z",
+      "incident_key": "INC-2150",
+      "service": {
+        "id": "SORDE",
+        "summary": "orders-db"
+      },
+      "html_url": "https://example.pagerduty.com/incidents/PH09KK5N",
+      "body": {
+        "type": "incident_body",
+        "details": {
+          "alertname": "DiskFull",
+          "host": "db-prod-03",
+          "mount": "/var/lib/postgresql",
+          "description": "PANIC: could not write to file pg_wal"
+        }
+      },
+      "log_entries": [
+        {
+          "id": "PH09KK5N-L0",
+          "type": "trigger_log_entry",
+          "created_at": "2026-03-15T04:55:00Z",
+          "summary": "Triggered through the Datadog integration: orders_db write failures: no space left on device",
+          "channel": {
+            "type": "alert",
+            "details": {
+              "alertname": "DiskFull",
+              "host": "db-prod-03",
+              "mount": "/var/lib/postgresql",
+              "description": "PANIC: could not write to file pg_wal"
+            }
+          }
+        },
+        {
+          "id": "PH09KK5N-L1",
+          "type": "assign_log_entry",
+          "created_at": "2026-03-15T04:55:05Z",
+          "summary": "Assigned to Priya Raman via escalation policy 'Core Platform'",
+          "agent": {
+            "summary": "Escalation Policy"
+          }
+        },
+        {
+          "id": "PH09KK5N-L2",
+          "type": "acknowledge_log_entry",
+          "created_at": "2026-03-15T04:57:30Z",
+          "summary": "Acknowledged by Priya Raman",
+          "agent": {
+            "summary": "Priya Raman"
+          }
+        },
+        {
+          "id": "PH09KK5N-N0",
+          "type": "annotate_log_entry",
+          "created_at": "2026-03-15T05:07:30Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Priya Raman"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "inactive replication slot replica_2 retaining 61GB"
+          }
+        },
+        {
+          "id": "PH09KK5N-N1",
+          "type": "annotate_log_entry",
+          "created_at": "2026-03-15T05:17:30Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Priya Raman"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "dropped slot"
+          }
+        },
+        {
+          "id": "PH09KK5N-LR",
+          "type": "resolve_log_entry",
+          "created_at": "2026-03-15T06:10:00Z",
+          "summary": "Resolved by Priya Raman",
+          "agent": {
+            "summary": "Priya Raman"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PJ31VV6R",
+      "incident_number": 2205,
+      "title": "payments-api error rate > 15% (HTTP 429 from processor)",
+      "status": "resolved",
+      "urgency": "low",
+      "created_at": "2026-07-27T18:22:00Z",
+      "resolved_at": "2026-07-27T19:15:00Z",
+      "incident_key": "INC-2205",
+      "service": {
+        "id": "SPAYM",
+        "summary": "payments-api"
+      },
+      "html_url": "https://example.pagerduty.com/incidents/PJ31VV6R",
+      "body": {
+        "type": "incident_body",
+        "details": {
+          "alertname": "HighErrorRatio",
+          "service": "payments-api",
+          "error_code": "ERR_7702",
+          "http_status": "429",
+          "description": "processor-api rate limiting"
+        }
+      },
+      "log_entries": [
+        {
+          "id": "PJ31VV6R-L0",
+          "type": "trigger_log_entry",
+          "created_at": "2026-07-27T18:22:00Z",
+          "summary": "Triggered through the Datadog integration: payments-api error rate > 15% (HTTP 429 from processor)",
+          "channel": {
+            "type": "alert",
+            "details": {
+              "alertname": "HighErrorRatio",
+              "service": "payments-api",
+              "error_code": "ERR_7702",
+              "http_status": "429",
+              "description": "processor-api rate limiting"
+            }
+          }
+        },
+        {
+          "id": "PJ31VV6R-L1",
+          "type": "assign_log_entry",
+          "created_at": "2026-07-27T18:22:05Z",
+          "summary": "Assigned to Dan Osei via escalation policy 'Core Platform'",
+          "agent": {
+            "summary": "Escalation Policy"
+          }
+        },
+        {
+          "id": "PJ31VV6R-L2",
+          "type": "acknowledge_log_entry",
+          "created_at": "2026-07-27T18:25:20Z",
+          "summary": "Acknowledged by Dan Osei",
+          "agent": {
+            "summary": "Dan Osei"
+          }
+        },
+        {
+          "id": "PJ31VV6R-N0",
+          "type": "annotate_log_entry",
+          "created_at": "2026-07-27T18:35:20Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Dan Osei"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "self-inflicted retry storm"
+          }
+        },
+        {
+          "id": "PJ31VV6R-N1",
+          "type": "annotate_log_entry",
+          "created_at": "2026-07-27T18:45:20Z",
+          "summary": "Note added",
+          "agent": {
+            "summary": "Dan Osei"
+          },
+          "channel": {
+            "type": "note",
+            "notes": "retry budget cut to 1"
+          }
+        },
+        {
+          "id": "PJ31VV6R-LR",
+          "type": "resolve_log_entry",
+          "created_at": "2026-07-27T19:15:00Z",
+          "summary": "Resolved by Dan Osei",
+          "agent": {
+            "summary": "Dan Osei"
+          }
+        }
+      ]
+    }
+  ]
+}

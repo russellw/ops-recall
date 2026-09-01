@@ -1,0 +1,86 @@
+{
+  "_comment": "A snapshot of 'the system right now'. Edit this and the agent's conclusions change: emptying orders_db.blocking_sessions turns the lock evidence from confirmed to refuted, and the recommended action changes with it. Timestamps may be absolute (`at`, `not_after`) or relative (`minutes_ago`, `days_from_now`) so the fixture does not go stale.",
+  "databases": {
+    "orders_db": {
+      "host": "db-prod-03",
+      "blocking_sessions": [
+        {
+          "pid": 51774,
+          "duration_seconds": 383,
+          "query": "VACUUM FULL orders",
+          "waiters": 44,
+          "user": "ops_maintenance",
+          "started_by": "manual psql session from bastion-2"
+        }
+      ],
+      "replication_slots": [
+        {"slot_name": "replica_3", "active": true, "retained_bytes": 812000000}
+      ]
+    },
+    "payments_db": {
+      "host": "db-prod-05",
+      "blocking_sessions": [],
+      "replication_slots": [
+        {"slot_name": "replica_1", "active": true, "retained_bytes": 240000000}
+      ]
+    }
+  },
+  "services": {
+    "checkout-api": {
+      "pool": {"active": 50, "idle": 0, "max": 50, "pending": 118},
+      "error_rate": 0.37,
+      "p99_ms": 8800,
+      "cpu_pct": 22,
+      "heap_used_pct": 54,
+      "restarts_1h": 0,
+      "rps": 940,
+      "deploys": []
+    },
+    "payments-api": {
+      "pool": {"active": 11, "idle": 29, "max": 40, "pending": 0},
+      "error_rate": 0.019,
+      "p99_ms": 310,
+      "cpu_pct": 18,
+      "heap_used_pct": 47,
+      "restarts_1h": 0,
+      "rps": 410,
+      "deploys": [{"version": "2026.09.01-3", "minutes_ago": 220, "by": "lena"}]
+    },
+    "orders-consumer": {
+      "error_rate": 0.001,
+      "p99_ms": 95,
+      "heap_used_pct": 51,
+      "restarts_1h": 0,
+      "deploys": []
+    },
+    "search-svc": {
+      "error_rate": 0.004,
+      "p99_ms": 180,
+      "heap_used_pct": 58,
+      "cpu_pct": 31,
+      "restarts_1h": 0,
+      "deploys": [{"version": "2026.08.31-1", "minutes_ago": 1400, "by": "nadia"}]
+    },
+    "edge-gw": {
+      "error_rate": 0.002,
+      "p99_ms": 44,
+      "restarts_1h": 0,
+      "deploys": []
+    }
+  },
+  "hosts": {
+    "db-prod-03": {"disks": {"/": {"used_pct": 41}, "/var/lib/postgresql": {"used_pct": 63}}},
+    "db-prod-05": {"disks": {"/": {"used_pct": 38}, "/var/lib/postgresql": {"used_pct": 52}}},
+    "edge-gw-2": {"disks": {"/": {"used_pct": 29}}}
+  },
+  "kafka": {
+    "consumer_groups": {
+      "orders-consumer": {"lag": 240, "partitions": 24, "state": "Stable"},
+      "search-indexer": {"lag": 1180, "partitions": 12, "state": "Stable"}
+    }
+  },
+  "certificates": {
+    "api.example.com": {"days_from_now": 237, "issuer": "R3"},
+    "edge.example.com": {"days_from_now": 237, "issuer": "R3"}
+  }
+}

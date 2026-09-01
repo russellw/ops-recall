@@ -1,0 +1,35 @@
+[project]
+name = "ops-recall"
+version = "0.1.0"
+description = "Reconstructs a firing alert from a team's own incident history: hybrid retrieval over post-mortems, Slack, PagerDuty and wiki, re-tested against live telemetry."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = [
+    "anthropic>=1.2",
+    "fastapi>=0.115",
+    "langgraph>=1.0",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.5",
+    "pyyaml>=6.0",
+    "qdrant-client>=1.12",
+    "uvicorn[standard]>=0.32",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "httpx>=0.27"]
+
+[project.scripts]
+ops-recall = "ops_recall.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["ops_recall*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["error::DeprecationWarning:ops_recall.*"]
